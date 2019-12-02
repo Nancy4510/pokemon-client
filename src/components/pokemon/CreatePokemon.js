@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import PokemonForm from './PokemonForm'
+import { withRouter } from 'react-router-dom'
 
-const CreatePokemon = props => {
+const CreatePokemon = (props) => {
   const [pokemon, setPokemon] = useState({ name: '', type: '', attack: '', weakness: '' })
 
   const handleChange = event => {
@@ -25,9 +26,10 @@ const CreatePokemon = props => {
     })
       .then(res => {
         props.alert({ heading: 'Success', message: 'Pokemon Created', variant: 'success' })
-        props.history.push(`pokemons/${res.data.pokemon._id}`)
+        props.history.push(`/pokemons/${res.data.pokemon._id}`)
       })
       .catch(console.error)
+    console.log('pokemon created:', pokemon)
   }
 
   return (
@@ -39,4 +41,4 @@ const CreatePokemon = props => {
   )
 }
 
-export default CreatePokemon
+export default withRouter(CreatePokemon)
