@@ -66,6 +66,9 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path='/pokemons' render={() => (
             <ViewPokemon alert={this.alert}/>
           )} />
+          <AuthenticatedRoute user={user} exact path='/pokemon/:id/delete' render={() => (
+            <ViewPokemon alert={this.alert}/>
+          )} />
         </main>
       </Fragment>
     )
