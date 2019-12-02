@@ -4,6 +4,9 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const authenticatedOptions = (
   <Fragment>
+    <Nav.Link href="#/create-pokemon">Create Pokemon</Nav.Link>
+    <Nav.Link href="#/pokemon/:id/edit">Edit Pokemon</Nav.Link>
+    <Nav.Link href="#/pokemons">View Pokemon</Nav.Link>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
   </Fragment>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
+import PokemonForm from './PokemonForm'
 
 const CreatePokemon = props => {
   const [pokemon, setPokemon] = useState({ name: '', type: '', attack: '', weakness: '' })
@@ -24,13 +25,12 @@ const CreatePokemon = props => {
     })
       .then(res => {
         props.alert({ heading: 'Success', message: 'Pokemon Created', variant: 'success' })
-        props.history.push(`pokemons/${res.data.book._id}`)
+        props.history.push(`pokemons/${res.data.pokemon._id}`)
       })
       .catch(console.error)
   }
 
   return (
-
     <PokemonForm
       pokemon={pokemon}
       handleChange={handleChange}

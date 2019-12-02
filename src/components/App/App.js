@@ -8,6 +8,9 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import CreatePokemon from '../pokemon/CreatePokemon'
+import EditPokemon from '../pokemon/EditPokemon'
+import ViewPokemon from '../pokemon/ViewPokemon'
 
 class App extends Component {
   constructor () {
@@ -53,6 +56,15 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-pokemon' render={() => (
+            <CreatePokemon alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/pokemon/:id/edit' render={() => (
+            <EditPokemon alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/pokemons' render={() => (
+            <ViewPokemon alert={this.alert}/>
           )} />
         </main>
       </Fragment>
