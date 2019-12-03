@@ -19,7 +19,7 @@ const ViewPokemon = props => {
   const pokemonsJSX = pokemons.map(pokemon => (
     <ListGroup.Item
       key={pokemon._id} as={'a'} href={`#pokemons/${pokemon._id}`}>
-      {pokemon}
+      {pokemon.name}
     </ListGroup.Item>
   ))
 

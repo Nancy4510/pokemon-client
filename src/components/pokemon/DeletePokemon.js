@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 const DeletePokemon = props => {
   const [pokemon, setPokemon] = useState(null)
-  const userId = props.user ? props.user._id : null
+  const userId = props.user._id
 
   useEffect(() => {
     axios(`${apiUrl}/pokemons/${props.match.params.id}`)
@@ -32,7 +32,7 @@ const DeletePokemon = props => {
   }
 
   if (!pokemon) {
-    return <p>Gathering pokemon...</p>
+    return <p>Catching pokemon for you...</p>
   }
 
   return (

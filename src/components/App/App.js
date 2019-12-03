@@ -11,6 +11,7 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import CreatePokemon from '../pokemon/CreatePokemon'
 import EditPokemon from '../pokemon/EditPokemon'
 import ViewPokemon from '../pokemon/ViewPokemon'
+import DeletePokemon from '../pokemon/DeletePokemon'
 
 class App extends Component {
   constructor () {
@@ -67,7 +68,7 @@ class App extends Component {
             <ViewPokemon alert={this.alert}/>
           )} />
           <AuthenticatedRoute user={user} exact path='/pokemon/:id/delete' render={() => (
-            <ViewPokemon alert={this.alert}/>
+            <DeletePokemon alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>
