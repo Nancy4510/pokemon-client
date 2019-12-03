@@ -24,9 +24,9 @@ const CreatePokemon = (props) => {
       },
       data: { pokemon }
     })
-      .then(res => {
+      .then(response => {
         props.alert({ heading: 'Success', message: 'Pokemon Created', variant: 'success' })
-        props.history.push(`/pokemons/${res.data.pokemon._id}`)
+        props.history.push(`/pokemons/${response.data.pokemon._id}`)
       })
       .catch(console.error)
     console.log('pokemon created:', pokemon)

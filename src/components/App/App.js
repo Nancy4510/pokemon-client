@@ -10,7 +10,7 @@ import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import CreatePokemon from '../pokemon/CreatePokemon'
 import EditPokemon from '../pokemon/EditPokemon'
-import ViewPokemon from '../pokemon/ViewPokemon'
+import ViewAllPokemon from '../pokemon/ViewAllPokemon'
 import DeletePokemon from '../pokemon/DeletePokemon'
 
 class App extends Component {
@@ -61,13 +61,13 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/create-pokemon' render={() => (
             <CreatePokemon alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} exact path='/pokemon/:id/edit' render={() => (
+          <AuthenticatedRoute user={user} exact path='/pokemons' render={() => (
+            <ViewAllPokemon alert={this.alert}/>
+          )} />
+          <AuthenticatedRoute user={user} exact path='/pokemons/:id/edit' render={() => (
             <EditPokemon alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} exact path='/pokemons' render={() => (
-            <ViewPokemon alert={this.alert}/>
-          )} />
-          <AuthenticatedRoute user={user} exact path='/pokemon/:id/delete' render={() => (
+          <AuthenticatedRoute user={user} exact path='/pokemons/:id' render={() => (
             <DeletePokemon alert={this.alert} user={user} />
           )} />
         </main>

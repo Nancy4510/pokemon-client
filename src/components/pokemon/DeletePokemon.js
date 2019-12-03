@@ -7,10 +7,11 @@ import Button from 'react-bootstrap/Button'
 const DeletePokemon = props => {
   const [pokemon, setPokemon] = useState(null)
   const userId = props.user._id
+  console.log(userId)
 
   useEffect(() => {
     axios(`${apiUrl}/pokemons/${props.match.params.id}`)
-      .then(res => setPokemon(res.data.pokemon))
+      .then(response => setPokemon(response.data.pokemon))
       .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested pokemon', variant: 'danger' }))
   }, [])
 
@@ -24,7 +25,7 @@ const DeletePokemon = props => {
     })
       .then(() => {
         props.alert({ heading: 'Success', message: 'You deleted your pokemon', variant: 'warning' })
-        props.history.push('/')
+        props.history.push('/pokemons')
       })
       .catch(() => {
         props.alert({ heading: 'Failed', message: 'Could not delete your pokemon', variant: 'danger' })
@@ -39,6 +40,7 @@ const DeletePokemon = props => {
     <Fragment>
       <h1>Pokemon</h1>
       <h2>{pokemon.name}</h2>
+      <Button href={`#pokemons/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
       {userId === pokemon.owner._id && <Button onClick={handleDelete} variant={'danger'}>Delete</Button>}
     </Fragment>
   )

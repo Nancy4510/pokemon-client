@@ -1,15 +1,16 @@
 import React, { useState, useEffect, Fragment } from 'react'
+// import { Link } from 'react-router-dom'
 import ListGroup from 'react-bootstrap/ListGroup'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 
-const ViewPokemon = props => {
+const ViewAllPokemon = props => {
   const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {
     axios(`${apiUrl}/pokemons`)
-      .then(res => {
-        setPokemons(res.data.pokemons)
+      .then(response => {
+        setPokemons(response.data.pokemons)
       })
 
       .then(() => props.alert({ heading: 'Success', message: 'Here are all your Pokemon', variant: 'success' }))
@@ -18,7 +19,10 @@ const ViewPokemon = props => {
 
   const pokemonsJSX = pokemons.map(pokemon => (
     <ListGroup.Item
-      key={pokemon._id} as={'a'} href={`#pokemons/${pokemon._id}`}>
+      key={pokemon._id}
+      as={'a'}
+      href={`#pokemons/${pokemon._id}`}
+    >
       {pokemon.name}
     </ListGroup.Item>
   ))
@@ -33,4 +37,4 @@ const ViewPokemon = props => {
   )
 }
 
-export default ViewPokemon
+export default ViewAllPokemon
