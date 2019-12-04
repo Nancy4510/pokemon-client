@@ -1,4 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
+img {
+  height: 60px;
+  width: 60px;
+}
 
 .btn-submit {
   background-color: black;
@@ -14,37 +24,43 @@
 }
 
 .pokemon {
+  background-color: black;
   border: 5px dashed black;
   border-radius: 30px;
+  color: white;
   height: 300px;
   margin-top: 20px;
   width: 500px;
   margin-left: 300px;
 }
 
+.pokemon-name {
+  margin-right: -50px;
+}
+
 .pokemon-info {
-  margin-top: -22px;
-  margin-left: 80px;
+  margin-bottom: 10px;
+  margin-left: 40px;
 }
 
 .btn-update {
   border-radius: 30px;
   height: 40px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 20px;
 }
 
 .btn-delete {
   border-radius: 30px;
   height: 40px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 20px;
 }
 
 .btn-back {
   border-radius: 30px;
   height: 40px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 20px;
   width: 70px;
 }
