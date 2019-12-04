@@ -51,7 +51,10 @@ const ViewOnePokemon = props => {
     // </Fragment>
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>{pokemon.name}</h2>
+        <h2>Name: {pokemon.name}</h2>
+        <h3>Type: {pokemon.type}</h3>
+        <h3>Attack: {pokemon.attack}</h3>
+        <h3>Weakness: {pokemon.weakness}</h3>
         {userId === pokemon.owner && (
           <Fragment>
             <Button href={`#pokemons/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
