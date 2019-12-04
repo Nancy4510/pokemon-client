@@ -22,6 +22,10 @@ h1 {
   margin-top: 20px;
 }
 
+h4 {
+  color: #FFCB05;
+}
+
 .btn-submit {
   background-color: black;
   border-color: black;
@@ -39,6 +43,7 @@ h1 {
   background-color: black;
   border: 5px dashed black;
   border-radius: 30px;
+  box-shadow: 5px 10px 10px 5px gray;
   color: white;
   height: 300px;
   margin-top: 20px;
@@ -47,6 +52,7 @@ h1 {
 }
 
 .pokemon-name {
+  color: #FFCB05;
   margin-right: -50px;
 }
 
@@ -94,6 +100,7 @@ h1 {
 }
 
 .middle-circle {
+  animation: blink .8s infinite;
   background-color: whitesmoke;
   border: 15px solid #000;
   border-radius: 100%;
@@ -102,6 +109,10 @@ h1 {
   margin-left: 150px;
   position: absolute;
   width: 100px;
+}
+
+@keyframes blink {
+	50% {background-color: rgb(230, 0, 0)}
 }
 
 .bottom-half-circle {
