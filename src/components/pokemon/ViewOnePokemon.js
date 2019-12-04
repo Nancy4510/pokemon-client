@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 const ViewOnePokemon = props => {
   const [pokemon, setPokemon] = useState(null)
   const userId = props.user._id
-  console.log(userId)
+  console.log('user id: ', userId)
 
   useEffect(() => {
     axios({
@@ -18,7 +18,7 @@ const ViewOnePokemon = props => {
       }
     })
       .then(response => setPokemon(response.data.pokemon))
-      .catch(() => props.alert({ heading: 'Oh no. Well this is embarrassing.', message: 'Couldn\'t collect the selected pokemon', variant: 'danger' }))
+      .catch(() => props.alert({ heading: 'Oh no. Well this is embarrassing.', message: 'Couldn\'t catch the selected pokemon', variant: 'danger' }))
   }, [])
 
   const handleDelete = event => {
@@ -58,7 +58,7 @@ const ViewOnePokemon = props => {
             <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
           </Fragment>
         )}
-        <Button href="#/" variant="secondary">Back</Button>
+        <Button href="#/pokemons" variant="secondary">Back</Button>
       </div>
     </div>
   )

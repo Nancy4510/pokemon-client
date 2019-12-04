@@ -8,10 +8,22 @@ const EditPokemon = props => {
   const [pokemon, setPokemon] = useState({ name: '', type: '', attack: '', weakness: '' })
   const [updated, setUpdated] = useState(false)
 
+  // useEffect(() => {
+  //   axios({
+  //     url: `${apiUrl}/pokemons/${props.match.params.id}`,
+  //     method: 'PATCH',
+  //     headers: {
+  //       'Authorization': `Bearer ${props.user.token}`
+  //     }
+  //   })
+  //     .then(response => setPokemon(response.data.pokemon))
+  //     .catch(console.error)
+  // }, [])
+
   useEffect(() => {
     axios(`${apiUrl}/pokemons/${props.match.params.id}`)
-      .then(res => setPokemon(res.data.pokemon))
-      .catch(console.error)
+      .then(response => setPokemon(response.data.book))
+      .catch(() => props.alert({ heading: 'Oh no. Well this is embarrassing.', message: 'Couldn\'t update your selected pokemon', variant: 'danger' }))
   }, [])
 
   const handleChange = event => {
@@ -30,8 +42,8 @@ const EditPokemon = props => {
       },
       data: { pokemon }
     })
-      .then(res => {
-        props.alert({ heading: 'Success', message: 'You updated your pokemon', variant: 'success' })
+      .then(response => {
+        props.alert({ heading: 'Success', message: 'You\'ve updated your pokemon', variant: 'success' })
         setUpdated(true)
       })
       .catch(() => props.alert({ heading: 'Failed', message: 'Update Failed. Try again', variant: 'danger' }))
