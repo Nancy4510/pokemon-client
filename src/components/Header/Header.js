@@ -6,35 +6,35 @@ import Pikachu from './pikachu.png'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#/create-pokemon">Create Pokemon</Nav.Link>
-    <Nav.Link href="#/pokemons">View Pokemon</Nav.Link>
-    <Nav.Link href="#change-password">Change Password</Nav.Link>
-    <Nav.Link href="#sign-out">Sign Out</Nav.Link>
+    <Nav.Link className="link" href="#/create-pokemon">Create Pokemon</Nav.Link>
+    <Nav.Link className="link" href="#/pokemons">View Pokemon</Nav.Link>
+    <Nav.Link className="link" href="#change-password">Change Password</Nav.Link>
+    <Nav.Link className="link" href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
 )
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#sign-up">Sign Up</Nav.Link>
-    <Nav.Link href="#sign-in">Sign In</Nav.Link>
+    <Nav.Link className="link" href="#sign-up">Sign Up</Nav.Link>
+    <Nav.Link className="link" href="#sign-in">Sign In</Nav.Link>
   </Fragment>
 )
 
 const alwaysOptions = (
   <Fragment>
-    <Nav.Link to="#/">Home</Nav.Link>
+    <Nav.Link className="link" to="#/">Home</Nav.Link>
   </Fragment>
 )
 
 const Header = ({ user }) => (
   <Navbar bg="dark" variant="dark" expand="md">
     <Navbar.Brand href="#">
-      <img src={Pikachu} />
+      <img src={Pikachu} /> Pokemon
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
-        { user && <span className="navbar-text mr-2">Welcome, {user.email}</span>}
+        { user && <span className="link navbar-text mr-2">Welcome, {user.email}</span>}
         { alwaysOptions }
         { user ? authenticatedOptions : unauthenticatedOptions }
       </Nav>
