@@ -4,13 +4,19 @@ import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import Button from 'react-bootstrap/Button'
 
-const DeletePokemon = props => {
+const ViewOnePokemon = props => {
   const [pokemon, setPokemon] = useState(null)
   const userId = props.user._id
   console.log(userId)
 
   useEffect(() => {
-    axios(`${apiUrl}/pokemons/${props.match.params.id}`)
+    axios({
+      url: `${apiUrl}/pokemons/${props.match.params.id}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${props.user.token}`
+      }
+    })
       .then(response => setPokemon(response.data.pokemon))
       .catch(() => props.alert({ heading: 'Oh no. Well this is embarrassing.', message: 'Couldn\'t collect the selected pokemon', variant: 'danger' }))
   }, [])
@@ -25,7 +31,7 @@ const DeletePokemon = props => {
     })
       .then(() => {
         props.alert({ heading: 'Success', message: 'You deleted your pokemon', variant: 'warning' })
-        props.history.push('/')
+        props.history.push('/pokemons')
       })
       .catch(() => {
         props.alert({ heading: 'Failed', message: 'Could not delete your pokemon', variant: 'danger' })
@@ -52,9 +58,10 @@ const DeletePokemon = props => {
             <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
           </Fragment>
         )}
+        <Button href="#/" variant="secondary">Back</Button>
       </div>
     </div>
   )
 }
 
-export default withRouter(DeletePokemon)
+export default withRouter(ViewOnePokemon)

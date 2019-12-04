@@ -11,7 +11,7 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import CreatePokemon from '../pokemon/CreatePokemon'
 import EditPokemon from '../pokemon/EditPokemon'
 import ViewAllPokemon from '../pokemon/ViewAllPokemon'
-import DeletePokemon from '../pokemon/DeletePokemon'
+import ViewOnePokemon from '../pokemon/ViewOnePokemon'
 
 class App extends Component {
   constructor () {
@@ -68,7 +68,7 @@ class App extends Component {
             <EditPokemon alert={this.alert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/pokemons/:id' render={() => (
-            <DeletePokemon alert={this.alert} user={user} />
+            <ViewOnePokemon alert={this.alert} user={user} />
           )} />
           <div className="circle">
             <div className="top-half-circle"></div>
