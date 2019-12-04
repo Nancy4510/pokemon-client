@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
-
+// import Button from 'react-bootstrap/Button'
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
 import Header from '../Header/Header'
@@ -67,9 +67,14 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path='/pokemons/:id/edit' render={() => (
             <EditPokemon alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} exact path='/pokemons/:id' render={() => (
+          <AuthenticatedRoute user={user} path='/pokemons/:id' render={() => (
             <DeletePokemon alert={this.alert} user={user} />
           )} />
+          <div className="circle">
+            <div className="top-half-circle"></div>
+            <div className="middle-circle"></div>
+            <div className="bottom-half-circle"></div>
+          </div>
         </main>
       </Fragment>
     )

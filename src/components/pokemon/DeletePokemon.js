@@ -12,7 +12,7 @@ const DeletePokemon = props => {
   useEffect(() => {
     axios(`${apiUrl}/pokemons/${props.match.params.id}`)
       .then(response => setPokemon(response.data.pokemon))
-      .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested pokemon', variant: 'danger' }))
+      .catch(() => props.alert({ heading: 'Oh no. Well this is embarrassing.', message: 'Couldn\'t collect the selected pokemon', variant: 'danger' }))
   }, [])
 
   const handleDelete = event => {
@@ -25,7 +25,7 @@ const DeletePokemon = props => {
     })
       .then(() => {
         props.alert({ heading: 'Success', message: 'You deleted your pokemon', variant: 'warning' })
-        props.history.push('/pokemons')
+        props.history.push('/')
       })
       .catch(() => {
         props.alert({ heading: 'Failed', message: 'Could not delete your pokemon', variant: 'danger' })
@@ -37,12 +37,23 @@ const DeletePokemon = props => {
   }
 
   return (
-    <Fragment>
-      <h1>Pokemon</h1>
-      <h2>{pokemon.name}</h2>
-      <Button href={`#pokemons/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
-      {userId === pokemon.owner._id && <Button onClick={handleDelete} variant={'danger'}>Delete</Button>}
-    </Fragment>
+    // <Fragment>
+    //   <h1>Pokemon</h1>
+    //   <h2>{pokemon.name}</h2>
+    //   <Button href={`#pokemons/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
+    //   {userId === pokemon.owner._id && <Button onClick={handleDelete} variant={'danger'}>Delete</Button>}
+    // </Fragment>
+    <div className="row">
+      <div className="col-sm-10 col-md-8 mx-auto mt-5">
+        <h2>{pokemon.name}</h2>
+        {userId === pokemon.owner && (
+          <Fragment>
+            <Button href={`#pokemons/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
+            <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
+          </Fragment>
+        )}
+      </div>
+    </div>
   )
 }
 

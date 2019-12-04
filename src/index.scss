@@ -1,1 +1,42 @@
 @import '~bootstrap/scss/bootstrap';
+
+.btn-create {
+  margin-top: 50px;
+}
+
+.circle {
+  margin-top: 150px;
+  margin-left: 350px;
+}
+
+.top-half-circle{
+  background-color: rgb(230, 0, 0);
+  border-top-right-radius: 50% 100%;
+  border-top-left-radius: 50% 100%;
+  border: 20px solid #000;
+  border-bottom: 10px solid;
+  height: 200px;
+  width: 400px;
+}
+
+.middle-circle {
+  background-color: whitesmoke;
+  border: 15px solid #000;
+  border-radius: 100%;
+  height: 100px;
+  margin-top: -45px;
+  margin-left: 150px;
+  position: absolute;
+  width: 100px;
+}
+
+.bottom-half-circle {
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  border-bottom-right-radius: 50% 100%;
+  border-bottom-left-radius: 50% 100%;
+  border: 20px solid #000;
+  border-top: 10px solid;
+  height: 200px;
+  width: 400px;
+}
