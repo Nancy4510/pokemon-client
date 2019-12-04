@@ -45,7 +45,7 @@ const PokemonForm = (props) => {
               onChange={handleChange}
             />
           </Form.Group>
-          <Button type="submit" variant="primary">Submit</Button>
+          <Button className="btn-submit" type="submit" variant="primary">Submit</Button>
         </Form>
       </div>
     </div>

@@ -44,25 +44,21 @@ const ViewOnePokemon = props => {
   }
 
   return (
-    // <Fragment>
-    //   <h1>Pokemon</h1>
-    //   <h2>{pokemon.name}</h2>
-    //   <Button href={`#pokemons/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
-    //   {userId === pokemon.owner._id && <Button onClick={handleDelete} variant={'danger'}>Delete</Button>}
-    // </Fragment>
-    <div className="row">
+    <div className="pokemon">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>Name: {pokemon.name}</h2>
-        <h3>Type: {pokemon.type}</h3>
-        <h3>Attack: {pokemon.attack}</h3>
-        <h3>Weakness: {pokemon.weakness}</h3>
+        <div className="pokemon-info">
+          <h2>Pokemon Name: {pokemon.name}</h2>
+          <h4>Type: {pokemon.type}</h4>
+          <h4>Attack: {pokemon.attack}</h4>
+          <h4>Weakness: {pokemon.weakness}</h4>
+        </div>
         {userId === pokemon.owner && (
           <Fragment>
-            <Button href={`#pokemons/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
-            <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
+            <Button className="btn-update" href={`#pokemons/${props.match.params.id}/edit`} variant="primary">Update</Button>
+            <Button className="btn-delete" onClick={handleDelete} variant="danger">Delete</Button>
           </Fragment>
         )}
-        <Button href="#/pokemons" variant="secondary">Back</Button>
+        <Button className="btn-back" href="#/pokemons" variant="secondary">Back</Button>
       </div>
     </div>
   )

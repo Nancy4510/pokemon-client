@@ -70,7 +70,7 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/pokemons/:id' render={() => (
             <ViewOnePokemon alert={this.alert} user={user} />
           )} />
-          <div className="circle">
+          <div className="pokeball">
             <div className="top-half-circle"></div>
             <div className="middle-circle"></div>
             <div className="bottom-half-circle"></div>
