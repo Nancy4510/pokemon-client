@@ -40,25 +40,53 @@ h4 {
 }
 
 .pokemon {
-  background-color: black;
-  border: 5px dashed black;
+  background-color: white;
+  border: 15px solid rgb(230, 0, 0);
   border-radius: 30px;
   box-shadow: 5px 10px 10px 5px gray;
   color: white;
-  height: 300px;
+  height: 700px;
   margin-top: 20px;
-  width: 500px;
+  width: 550px;
   margin-left: 300px;
 }
 
 .pokemon-name {
   color: #FFCB05;
   margin-right: -50px;
+  padding-top: 20px;
+}
+
+.div-image {
+  border-radius: 20px;
+  height: 200px;
+}
+
+.pika {
+  height: 300px;
+  margin-top: -10px;
+  margin-left: 40px;
+  width: 300px;
+}
+
+.screen {
+  background-color: black;
+  border-radius: 20px;
+  height: 200px;
+  margin-top: 150px;
+  margin-left: -40px;
+  width: 400px;
 }
 
 .pokemon-info {
-  margin-bottom: 10px;
-  margin-left: 40px;
+  animation: fade-in .9s;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+
+@keyframes fade-in {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
 .btn-update {
@@ -85,7 +113,7 @@ h4 {
 
 
 .pokeball {
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: 340px;
 }
 

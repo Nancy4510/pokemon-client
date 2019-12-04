@@ -5,18 +5,23 @@ import axios from 'axios'
 // import apiUrl from '../../apiConfig'
 
 const ListOfRealPokemon = props => {
-  const [realpokemons, setRealPokemons] = useState('https://pokeapi.co/api/v2/pokemon/')
+  const [imagepokemons, setImagePokemons] = useState([])
 
   useEffect(() => {
-    axios('https://pokeapi.co/api/v2/pokemon/')
-      .then(response => setRealPokemons(response.data))
-      .catch(() => props.alert({ heading: 'Oh no. Well this is embarrassing.', message: 'Couldn\'t catch all pokemon', variant: 'danger' }))
+    getImages()
   }, [])
+
+  const getImages = () => {
+    axios('https://pokeapi.co/api/v2/pokemon/')
+      .then(response => setImagePokemons(response.data))
+      .catch(() => props.alert({ heading: 'Oh no. Well this is embarrassing.', message: 'Couldn\'t catch all pokemon', variant: 'danger' }))
+  }
 
   return (
     <Fragment>
       <h1>Pokemon</h1>
-      {realpokemons}
+      {imagepokemons}
+      <img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + '.png'} className="sprite" />
     </Fragment>
   )
 }

@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import Button from 'react-bootstrap/Button'
+import Pikachu1 from './pikachu1.jpeg'
 
 const ViewOnePokemon = props => {
   const [pokemon, setPokemon] = useState(null)
@@ -46,11 +47,16 @@ const ViewOnePokemon = props => {
   return (
     <div className="pokemon">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <div className="pokemon-info">
-          <h2 className="pokemon-name">Pokémon Name: {pokemon.name}</h2>
-          <h4>Type: {pokemon.type}</h4>
-          <h4>Attack: {pokemon.attack}</h4>
-          <h4>Weakness: {pokemon.weakness}</h4>
+        <div className="div-image">
+          <img className="pika" src={Pikachu1} />
+        </div>
+        <div className="screen">
+          <div className="pokemon-info">
+            <h2 className="pokemon-name">Pokémon Name: {pokemon.name}</h2>
+            <h4>Type: {pokemon.type}</h4>
+            <h4>Attack: {pokemon.attack}</h4>
+            <h4>Weakness: {pokemon.weakness}</h4>
+          </div>
         </div>
         {userId === pokemon.owner && (
           <Fragment>

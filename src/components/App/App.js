@@ -12,6 +12,7 @@ import CreatePokemon from '../pokemon/CreatePokemon'
 import EditPokemon from '../pokemon/EditPokemon'
 import ViewAllPokemon from '../pokemon/ViewAllPokemon'
 import ViewOnePokemon from '../pokemon/ViewOnePokemon'
+import ListOfRealPokemon from '../pokemon/ListOfRealPokemon'
 
 class App extends Component {
   constructor () {
@@ -69,6 +70,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/pokemons/:id' render={() => (
             <ViewOnePokemon alert={this.alert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/real-pokemon' render={() => (
+            <ListOfRealPokemon alert={this.alert}/>
           )} />
           <div className="pokeball">
             <div className="top-half-circle"></div>
