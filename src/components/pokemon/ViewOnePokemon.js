@@ -10,6 +10,7 @@ const ViewOnePokemon = props => {
   console.log('user id: ', userId)
 
   useEffect(() => {
+    console.log(props.user)
     axios({
       url: `${apiUrl}/pokemons/${props.match.params.id}`,
       method: 'GET',
