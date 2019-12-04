@@ -7,12 +7,12 @@ const PokemonForm = (props) => {
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>Create or Update a Pokemon</h2>
+        <h2>Create or Update a Pokémon</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="name">
             <Form.Label>Name</Form.Label>
             <Form.Control
-              placeholder="Enter your pokemon"
+              placeholder="Enter your pokémon"
               value={pokemon.name}
               name="name"
               onChange={handleChange}

@@ -31,11 +31,11 @@ const ViewOnePokemon = props => {
       }
     })
       .then(() => {
-        props.alert({ heading: 'Success', message: 'You deleted your pokemon', variant: 'warning' })
+        props.alert({ heading: 'Success', message: 'You deleted your pokémon', variant: 'warning' })
         props.history.push('/pokemons')
       })
       .catch(() => {
-        props.alert({ heading: 'Failed', message: 'Could not delete your pokemon', variant: 'danger' })
+        props.alert({ heading: 'Failed', message: 'Could not delete your pokémon', variant: 'danger' })
       })
   }
 
@@ -47,7 +47,7 @@ const ViewOnePokemon = props => {
     <div className="pokemon">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <div className="pokemon-info">
-          <h2 className="pokemon-name">Pokemon Name: {pokemon.name}</h2>
+          <h2 className="pokemon-name">Pokémon Name: {pokemon.name}</h2>
           <h4>Type: {pokemon.type}</h4>
           <h4>Attack: {pokemon.attack}</h4>
           <h4>Weakness: {pokemon.weakness}</h4>

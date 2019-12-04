@@ -13,14 +13,14 @@ const ViewAllPokemon = props => {
         setPokemons(response.data.pokemons)
       })
 
-      .then(() => props.alert({ heading: 'Success', message: 'Here are all your Pokemon', variant: 'success' }))
+      .then(() => props.alert({ heading: 'Success', message: 'Here are all your Pokémon', variant: 'success' }))
       .catch(console.error)
   }, []) // dependencies array
 
   const pokemonsJSX = pokemons.map(pokemon => (
     <ListGroup.Item
       key={pokemon._id}
-      as={'a'}
+      action
       href={`#pokemons/${pokemon._id}`}
     >
       {pokemon.name}
@@ -29,7 +29,7 @@ const ViewAllPokemon = props => {
 
   return (
     <Fragment>
-      <h1>Pokemon</h1>
+      <h1>Pokémon</h1>
       <ListGroup>
         {pokemonsJSX}
       </ListGroup>

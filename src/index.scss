@@ -5,6 +5,10 @@ body {
   font-family: 'Inconsolata', monospace;
 }
 
+span {
+  font-size: 35px;
+}
+
 img {
   height: 60px;
   width: 60px;
@@ -12,6 +16,10 @@ img {
 
 .link {
   font-size: 20px;
+}
+
+h1 {
+  margin-top: 20px;
 }
 
 .btn-submit {

@@ -37,7 +37,7 @@ const EditPokemon = props => {
       data: { pokemon }
     })
       .then(response => {
-        props.alert({ heading: 'Success', message: 'You\'ve updated your pokemon', variant: 'success' })
+        props.alert({ heading: 'Success', message: 'You\'ve updated your pokémon', variant: 'success' })
         setUpdated(true)
         console.log('res: ', response)
       })

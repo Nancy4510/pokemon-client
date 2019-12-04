@@ -6,8 +6,8 @@ import Pikachu from './pikachu.png'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link className="link" href="#/create-pokemon">Create Pokemon</Nav.Link>
-    <Nav.Link className="link" href="#/pokemons">View Pokemon</Nav.Link>
+    <Nav.Link className="link" href="#/create-pokemon">Create Pokémon</Nav.Link>
+    <Nav.Link className="link" href="#/pokemons">View Pokémon</Nav.Link>
     <Nav.Link className="link" href="#change-password">Change Password</Nav.Link>
     <Nav.Link className="link" href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
@@ -22,14 +22,14 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <Fragment>
-    <Nav.Link className="link" to="#/">Home</Nav.Link>
+    <Nav.Link className="link" to="#">Home</Nav.Link>
   </Fragment>
 )
 
 const Header = ({ user }) => (
   <Navbar bg="dark" variant="dark" expand="md">
     <Navbar.Brand href="#">
-      <img src={Pikachu} /> Pokemon
+      <img src={Pikachu} /> <span>Pokémon</span>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
