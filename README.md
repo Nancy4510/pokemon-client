@@ -41,9 +41,19 @@ repository.
 - As a user, I want to be able to delete a Pokemon.
 
 ## **Technologies Used**
-- React
-- React Hooks
 - CSS/SASS
+
+- Express
+
+- Heroku
+
+- MongoDB
+
+- Mongoose
+
+- React
+
+- React Hooks
 
 ## **Unsolved Issues/Future**
 One thing that I would like to continue working on is the styling. I wouldn't say that styling was an unsolved issue but I felt that since I was using React and I'm still learning about it, styling was limited for me.

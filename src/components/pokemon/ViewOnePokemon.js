@@ -8,10 +8,10 @@ import Pikachu1 from './pikachu1.jpeg'
 const ViewOnePokemon = props => {
   const [pokemon, setPokemon] = useState(null)
   const userId = props.user._id
-  console.log('user id: ', userId)
+  // console.log('user id: ', userId)
 
   useEffect(() => {
-    console.log(props.user)
+    // console.log(props.user)
     axios({
       url: `${apiUrl}/pokemons/${props.match.params.id}`,
       method: 'GET',

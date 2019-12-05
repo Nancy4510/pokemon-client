@@ -26,6 +26,15 @@ h4 {
   color: #FFCB05;
 }
 
+.pokemon-name-link {
+  color: white;
+}
+
+.pokemon-name-link:hover {
+  color: rgb(230, 0, 0);
+  text-decoration: none;
+}
+
 .btn-submit {
   background-color: black;
   border-color: black;
@@ -90,6 +99,7 @@ h4 {
   margin-left: 20px;
 }
 
+// "Keyframes hold what styles the element will have at certain times."
 @keyframes fade-in {
   0% {opacity:0;}
   100% {opacity:1;}

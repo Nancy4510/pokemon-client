@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react'
 // import { Link } from 'react-router-dom'
 import ListGroup from 'react-bootstrap/ListGroup'
+import Table from 'react-bootstrap/Table'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 
@@ -18,13 +19,35 @@ const ViewAllPokemon = props => {
   }, []) // dependencies array
 
   const pokemonsJSX = pokemons.map(pokemon => (
-    <ListGroup.Item
+  //   <ListGroup.Item
+  //     key={pokemon._id}
+  //     action
+  //     href={`#pokemons/${pokemon._id}`}
+  //   >
+  //     Pokémon Name: {pokemon.name}
+  //   </ListGroup.Item>
+  // ))
+
+    <Table striped bordered hover variant="dark"
       key={pokemon._id}
-      action
+      action = 'true'
       href={`#pokemons/${pokemon._id}`}
     >
-      {pokemon.name}
-    </ListGroup.Item>
+      <thead>
+        <tr>
+          <th>Pokemon Name</th>
+          <th>Type</th>
+          <th>Pokemon ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> <a className='pokemon-name-link' href={`#pokemons/${pokemon._id}`}>{pokemon.name}</a></td>
+          <td>{pokemon.type}</td>
+          <td>{pokemon._id}</td>
+        </tr>
+      </tbody>
+    </Table>
   ))
 
   return (
