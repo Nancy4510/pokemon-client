@@ -4,6 +4,9 @@ This part of the project is the client side where the user can see and interact 
 ## **Description**
 For this last project I decided to do something related with Pokemon where a user can create thier own pokemon by filling out the name, the type of the Pokemon, the attack it has and its weakness. The user can also update thier pokemon as well as delete too. They can also view all the Pokemon they created as well. A user can only create a Pokemon, update it, view it if they are signed in. The user should be able to sign-up successfully, sign-in successfully, change thier password successfully and sign out as well.
 
+## **Development Process**
+Before I started with the coding, I started out by creating a wireframe for the project as to how I would make the front-end or how I would like it to be. I also started by writing out user stories as well. Both the wireframes and the user stories helped me stay focus and on track with completing the requirements needed for the project. Then I started coding out the project little by little until it was completed. I did run into some complications where I was getting errors and trying to see why I was getting those errors. I solved a few errors on my own, while for other errors I seeked help.
+
 ## **User Stories**
 - As a user, I want to be able to sign-up successfully.
 
@@ -29,6 +32,7 @@ For this last project I decided to do something related with Pokemon where a use
 - CSS/SASS
 
 ## **Unsolved Issues/Future**
+One thing that I would like to continue working on is the styling. I wouldn't say that styling was an unsolved issue but I felt that since I was using React and I'm still learning about it, styling was limited for me.
 
 ## **API Repository**
 - Link to API repo: [Pokemon-API Repo](https://github.com/Nancy4510/pokemon-api)
@@ -39,5 +43,5 @@ For this last project I decided to do something related with Pokemon where a use
 ## **WireFrames**
 **Wireframe to front-end**
 
-![Wireframe](WireFrame1.png)
-![Wireframe](WireFrame2.png)
+![Wireframe1](WireFrame1.png)
+![Wireframe2](Wireframe2.png)
