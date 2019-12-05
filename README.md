@@ -56,7 +56,7 @@ repository.
 - React Hooks
 
 ## **Unsolved Issues/Future**
-One thing that I would like to continue working on is the styling. I wouldn't say that styling was an unsolved issue but I felt that since I was using React and I'm still learning about it, styling was limited for me.
+One thing that I would like to continue working on is the styling. I wouldn't say that styling was an unsolved issue but I felt that since I was using React and I'm still learning about it, styling was limited for me. Something that I didn't get to do was use a third party API which I would like to do in the near future.
 
 ## **API Repository**
 - Link to API repo: [Pokemon-API Repo](https://github.com/Nancy4510/pokemon-api)
