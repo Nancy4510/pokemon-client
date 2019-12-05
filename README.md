@@ -7,6 +7,9 @@ For this last project I decided to do something related with Pokemon where a use
 ## **Development Process**
 Before I started with the coding, I started out by creating a wireframe for the project as to how I would make the front-end or how I would like it to be. I also started by writing out user stories as well. Both the wireframes and the user stories helped me stay focus and on track with completing the requirements needed for the project. Then I started coding out the project little by little until it was completed. I did run into some complications where I was getting errors and trying to see why I was getting those errors. I solved a few errors on my own, while for other errors I seeked help.
 
+## **Setup Steps**
+If you wish to run this project locally and get it working, you can follow the following steps:
+
 ## **User Stories**
 - As a user, I want to be able to sign-up successfully.
 
