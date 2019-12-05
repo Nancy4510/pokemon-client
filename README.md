@@ -33,7 +33,11 @@ For this last project I decided to do something related with Pokemon where a use
 ## **API Repository**
 - Link to API repo: [Pokemon-API Repo](https://github.com/Nancy4510/pokemon-api)
 - Link to client repo: [Pokemon-Client Repo](https://github.com/Nancy4510/pokemon-client)
-- Link to the deployed back-end: [Back-end deployed link](https://enigmatic-brook-22865.herokuapp.com/)
+- Link to the deployed back-end: [Deployed Back-End](https://enigmatic-brook-22865.herokuapp.com/)
 - Link to the deployed site: [Pokemon](https://nancy4510.github.io/pokemon-client/#//)
 
 ## **WireFrames**
+**Wireframe to front-end**
+
+![Wireframe](WireFrame1.png)
+![Wireframe](WireFrame2.png)
