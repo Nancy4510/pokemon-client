@@ -40,7 +40,7 @@ h4 {
 }
 
 .pokemon {
-  background-color: white;
+  background-color: red;
   border: 15px solid rgb(230, 0, 0);
   border-radius: 30px;
   box-shadow: 5px 10px 10px 5px gray;
@@ -58,15 +58,21 @@ h4 {
 }
 
 .div-image {
+  background-color: white;
+  border: 7px solid orange;
   border-radius: 20px;
-  height: 200px;
+  height: 350px;
+  margin-top: -30px;
+  margin-left: -15px;
+  width: 350px;
 }
 
 .pika {
+  animation: fade-in .9s;
   height: 300px;
-  margin-top: -10px;
+  padding-top: 30px;
   margin-left: 40px;
-  width: 300px;
+  width: 280px;
 }
 
 .screen {
@@ -80,7 +86,7 @@ h4 {
 
 .pokemon-info {
   animation: fade-in .9s;
-  margin-top: -20px;
+  margin-top: -130px;
   margin-left: 20px;
 }
 
