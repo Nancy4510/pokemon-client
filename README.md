@@ -10,6 +10,17 @@ Before I started with the coding, I started out by creating a wireframe for the 
 ## **Setup Steps**
 If you wish to run this project locally and get it working, you can follow the following steps:
 
+1. [Fork and Clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone) this
+repository.
+2. Run `npm install` to install dependencies
+3. Use `npm start` to view the app in the browser
+
+### **Important Links** 👇
+- Link to API repo: [Pokemon-API Repo](https://github.com/Nancy4510/pokemon-api)
+- Link to client repo: [Pokemon-Client Repo](https://github.com/Nancy4510/pokemon-client)
+- Link to the deployed back-end: [Deployed Back-End](https://enigmatic-brook-22865.herokuapp.com/)
+- Link to the deployed site: [Pokemon](https://nancy4510.github.io/pokemon-client/#//)
+
 ## **User Stories**
 - As a user, I want to be able to sign-up successfully.
 
