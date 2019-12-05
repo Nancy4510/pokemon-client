@@ -35,9 +35,9 @@ const ViewAllPokemon = props => {
     >
       <thead>
         <tr>
-          <th>Pokemon Name</th>
+          <th>Pokémon Name</th>
           <th>Type</th>
-          <th>Pokemon ID</th>
+          <th>Pokémon ID</th>
         </tr>
       </thead>
       <tbody>
@@ -53,6 +53,7 @@ const ViewAllPokemon = props => {
   return (
     <Fragment>
       <h1>Pokémon</h1>
+      <h3>To view more information about your pokémon, just click on its name!</h3>
       <ListGroup>
         {pokemonsJSX}
       </ListGroup>
