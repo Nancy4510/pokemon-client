@@ -10,7 +10,6 @@ const authenticatedOptions = (
     <Nav.Link className="link" href="#/pokemons">View Pokémon</Nav.Link>
     <Nav.Link className="link" href="#change-password">Change Password</Nav.Link>
     <Nav.Link className="link" href="#sign-out">Sign Out</Nav.Link>
-    <Nav.Link className="link" href="#/real-pokemon">Real Pokémon</Nav.Link>
   </Fragment>
 )
 

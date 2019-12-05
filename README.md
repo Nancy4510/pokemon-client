@@ -45,3 +45,10 @@ One thing that I would like to continue working on is the styling. I wouldn't sa
 
 ![Wireframe1](WireFrame1.png)
 ![Wireframe2](Wireframe2.png)
+
+## **Screenshot of the app**
+**Landing page**
+![app1](app1.png)
+
+**What the user sees once they're logged-in**
+![app2](app2.png)
